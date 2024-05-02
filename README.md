@@ -144,3 +144,46 @@ jobs:
 ## Conclusão
 
 A automação de PRs desempenha um papel fundamental na melhoria da eficiência e da qualidade do processo de colaboração em projetos hospedados no GitHub. Ao entender os diversos componentes e possibilidades de automação, os desenvolvedores podem criar fluxos de trabalho personalizados que atendam às necessidades específicas de seus projetos. Esperamos que este projeto tenha sido útil para a compreensão dos conceitos e práticas relacionadas à automação de PRs.
+
+
+## Criando uma contribuição relacionada ao exemplo de integração com ferramentas de gerenciamento de projetos, mostrando como integrar o GitHub com o Trello.
+
+
+### Integração do GitHub com o Trello: Automatizando a Gestão de Tarefas
+
+#### Objetivo:
+
+Demonstrar como configurar uma integração entre o GitHub e o Trello para automatizar a gestão de tarefas em projetos de desenvolvimento de software.
+
+#### Passos:
+
+1. **Configurar um Board no Trello:**
+   - Acesse o Trello e crie um novo board para o seu projeto de software.
+   - Crie listas no board para representar diferentes estágios do fluxo de trabalho, como "To Do", "In Progress" e "Done".
+
+2. **Gerar uma Chave e Token de Acesso no Trello:**
+   - Acesse o [site de desenvolvedores do Trello](https://trello.com/app-key) e gere uma chave de API.
+   - Use a chave de API gerada para gerar um token de acesso.
+
+3. **Adicionar a Chave e o Token ao GitHub:**
+   - Acesse as configurações do seu repositório no GitHub.
+   - No menu à esquerda, clique em "Secrets" (ou "Segredos").
+   - Adicione a chave de API como uma variável de ambiente com o nome `TRELLO_API_KEY` e o token de acesso como uma variável de ambiente com o nome `TRELLO_API_TOKEN`.
+
+4. **Criar um Fluxo de Trabalho no GitHub:**
+   - Crie um arquivo YAML para o fluxo de trabalho do GitHub, por exemplo, `.github/workflows/trello-integration.yml`.
+   - Configure o fluxo de trabalho para ser executado sempre que um PR for aberto ou uma alteração for feita na branch principal.
+   - No fluxo de trabalho, use a ação `trello-sync-action` para criar cards no Trello sempre que um PR for aberto ou atualizado.
+
+5. **Testar a Integração:**
+   - Abra um PR no seu repositório do GitHub.
+   - Verifique se um card correspondente foi criado automaticamente no board do Trello.
+   - Mova o card através das listas do Trello para simular o progresso do trabalho.
+
+#### Conclusão:
+
+A integração do GitHub com o Trello proporciona uma maneira eficiente de gerenciar tarefas e acompanhar o progresso do desenvolvimento de software. Ao automatizar a criação e atualização de cards no Trello a partir de atividades no GitHub, os desenvolvedores podem manter uma visão clara do fluxo de trabalho e garantir uma melhor coordenação entre as equipes de desenvolvimento e gestão de projetos.
+
+Espero que esta contribuição seja útil para os usuários interessados em melhorar a eficiência e a organização dos seus projetos de software. Se precisar de mais informações ou assistência para implementar essa integração, não hesite em entrar em contato.
+
+
